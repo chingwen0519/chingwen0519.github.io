@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Chingwen"><title>零基础自建博客避坑指南(Hexo + GitHub) · Chingwen's Journal</title><meta name="description" content="打算自建博客是出于总结之必要而折腾的这些时间，则明白了学习的过程偶尔迷路之必要
+原以为的学习路径是：
+
+把”零基础搭建github博客“之类的关键字丢入Google
+找一篇详细的文章按部就班
+登楞，搭好啦
+
+但实际的过程却没有这么线性。事实上大多数”零基础“的教程还是要求一些基础的技术概念，至少使用"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Chingwen's Journal</a></h3><div class="description"><p>瀑布流里游泳 - 资讯杂食者的网络生活笔记</p></div></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">摄影</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>零基础自建博客避坑指南(Hexo + GitHub)</a></h3></div><div class="post-content"><p>打算自建博客是出于总结之必要<br>而折腾的这些时间，则明白了学习的过程偶尔迷路之必要</p>
+<p>原以为的学习路径是：</p>
+<ol>
+<li>把”零基础搭建github博客“之类的关键字丢入Google</li>
+<li>找一篇详细的文章按部就班</li>
+<li>登楞，搭好啦</li>
+</ol>
+<p>但实际的过程却没有这么线性。事实上大多数”零基础“的教程还是要求一些基础的技术概念，至少使用者不能害怕打开终端机敲上几行命令。此外，因各人操作环境等不同，实操过程中势必会出现单一教程无法指示你如何避过的坑。很多时候你需要自己读懂错误提示，再善用Google找到解决办法。<br>这个过程中浏览器的标签页越开越多，但是每一点小知识也开枝散叶地长开来。当终于见到初具框架的成品，成就感不亚于还需要算考题的时候，忍着不看书本最后的参考答案，自己解出答案那一刻。</p>
+<p>在此以自己迷路的经验，记录下一些可以避开的坑。<br>首先，我们来看看使用GitHub与Hexo自建博客有哪些关键的步骤</p>
+<ul>
+<li>注册GitHub （昂，不是GayHub啦。Girls can code!)</li>
+<li>安装Git，node.js和Hexo并配置</li>
+<li>初始化并配置博客</li>
+<li>添加SSH Key</li>
+</ul>
+<p>具体的步骤，特别推荐参考这篇教程：<a href="https://www.jianshu.com/p/e99ed60390a8#" target="_blank" rel="noopener">【9】全民博客时代的到来——20分钟简要教程 - 简书</a></p>
+<p>以下特别记录几个我个人踩过的坑与可行的解决方法：</p>
+<ul>
+<li>部署Hexo时每次都要求输入GitHub用户名与密码？<br>你需要添加SSH Keys到GitHub中。如果找不到安装路径，可在终端输入<blockquote>
+<p>open ~/.ssh</p>
+</blockquote>
+</li>
+</ul>
+<p>就可以找到id_rsa.pub了</p>
+<ul>
+<li>macOS安装Anatole主题却崩坏？<br>请在终端输入<br>npm install —save hexo-render-pug hexo-generator-archive hexo-generator-tag hexo-generator-index hexo-generator-category</li>
+<li>Anatole主题默认英文全大写？<br>这部分的处理方法是我自己摸索出来的，不确定会不会有什么不良后果 &gt;&lt;<br>用Chrome检查页面元素，找到英文全大写对应的css文件，删除<blockquote>
+<p>text-transformation:uppercase;</p>
+</blockquote>
+</li>
+</ul>
+<p>喏，虽然是零基础，但即便技术小白如我，也还是需要用到一些基础的css只是来解决问题。此外，善用Google和良好的英文能力，也能让从坑里跑起来的速度快一点。</p>
+<p>以上就是Chingwen’s Journal的第一篇，是今日在网络瀑布流的信息中，抓住了一些知识的记录。</p>
+<p>继续游✌️</p>
+<hr>
+<p>source:<br>1.<a href="https://www.jianshu.com/p/e99ed60390a8#" target="_blank" rel="noopener">【9】全民博客时代的到来——20分钟简要教程 - 简书</a><br>2.<a href="https://hexo.io/zh-tw/docs/" target="_blank" rel="noopener">Hexo官方文档</a><br>3.<a href="https://github.com/Ben02/hexo-theme-Anatole/wiki/Installation" target="_blank" rel="noopener">Anatole主题使用文档</a></p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-08-24</span><i class="fa fa-tag"></i><a class="tag" href="/tags/一点迷路的必要/" title="一点迷路的必要">一点迷路的必要 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://yoursite.com/2018/08/24/零基础自建博客（GitHub+Hexo)/,Chingwen's Journal,零基础自建博客避坑指南(Hexo + GitHub),;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2018/08/28/[1:30] 30 x 100 UX学习计划/" title="[1/30] 30 x 100 UX学习计划">上一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
